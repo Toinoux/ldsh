@@ -34,13 +34,11 @@ static int read_input(struct core *core) {
 }
 
 int engine(struct core *core) {
-    //char *usr_cmd = "ls -la";
 
     while (NON_STOP) {
         putstr(core->prompt);
         read_input(core);
         parse_cmd(core);
-        //break;
     };
     return (OK);
 }
